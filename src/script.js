@@ -10,6 +10,13 @@ const newGameForm = document.querySelector('#new-game-form')
 const menuNewGameButton = document.querySelector('#menu__new-game-button');
 
 
+const initialize = () =>{
+
+}
+
+
+
+
 
 menuNewGameButton.addEventListener('click', () => {
 
