@@ -1,12 +1,15 @@
 import { toHide, toggleHide } from "./utils.js";
 
 const menuSection = document.querySelector('#menu-section');
+const newGameSection = document.querySelector('#new-game-form-section');
+const rankingSection = document.querySelector('#ranking-section');
+const gameSection = document.querySelector('#game-section');
+
+const newGameForm = document.querySelector('#new-game-form')
 
 const menuNewGameButton = document.querySelector('#menu__new-game-button');
 
-const newGameSection = document.querySelector('#new-game-form-section')
 
-const newGameForm = document.querySelector('#new-game-form')
 
 menuNewGameButton.addEventListener('click', () => {
 
