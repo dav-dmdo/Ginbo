@@ -179,7 +179,7 @@ footer {
   flex: 1;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 
   padding: 4%;
@@ -192,7 +192,9 @@ footer {
   flex-flow: row nowrap;
   justify-content: space-evenly;
   align-items: baseline;
-  width: 100%;
+  align-self: stretch;
+  gap: 12px;
+  margin-top: 16px;
 }
 
 .form__label {
@@ -232,6 +234,7 @@ footer {
   font-size: var(--l-font-size);
   font-weight: var(--primary-font-weight-700);
   padding: 0;
+  height: 80px;
 }
 
 .form__button::before {
@@ -256,25 +259,32 @@ footer {
 
 /*   new game form section:    Boards    */
 
-.boards-container{
+.board-size-container{
+  flex: 1;
   display: flex;
-  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: stretch; 
+}
+
+.board-size-container input[type="radio"] {
+ display: none;
+}
+
+.board-size-container div label{
+  font-family: var(--primary-font);
+  font-size: var(--m-font-size);
+  font-weight: var(--primary-font-weight-400);
+  color: var(--color--tertiary);
+}
+
+.board-size-container div input[type="radio"]:checked + label{
+  font-size: var(--l-font-size);
+  font-weight: var(--primary-font-weight-400);
+  text-shadow: 1px 1px var(--color--secondary);
+  border-bottom: 2px solid var(--color--secondary);
 
 }
 
-.board{
-  display: grid;
-  gap: 5%;
-  width: 100px;
-  height: 100px;
-}
 
-.three-board{
-  grid-template-columns: repeat(3, auto);
-}
-.four-board{
-  grid-template-columns: repeat(4, auto);
-}
-.five-board{
-  grid-template-columns: repeat(5, auto);
-}
+
+
