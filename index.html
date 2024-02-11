@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ginbo</title>
-    <link rel="stylesheet" href="./src/mobile.css" />
+    <link rel="stylesheet" href="./src/styles/mobile.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,21 +14,111 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="header__title">G I N B O</h1>
+      <h1 class="header__title">GINBO</h1>
     </header>
 
     <main>
-      <section class="menu">
-        <a href="#" class="button menu__button">New Game</a>
-        <a href="#" class="button menu__button">Ranking</a>
+      <section id="menu-section" class="menu-section hidden">
+        <div class="menu">
+          <a href="#" id="menu__new-game-button" class="button menu__button"
+            >New Game</a
+          >
+          <a href="#" class="button menu__button">Ranking</a>
+        </div>
       </section>
-      <section class="new-game-form"></section>
-      <section class="ranking"></section>
+
+      <section id="new-game-form-section"class="new-game-form-section ">
+        <form action="#" id="new-game-form" class="form">
+          <ul class="form__list">
+            <li class="form__item">
+              <label for="input_player1" class="form__label"><span>Player 1</span></label>
+              <input type="text" id="input_player1" class="form__input" required />
+            </li>
+            <li class="form__item">
+              <label for="input_player2" class="form__label"><span>Player 2</span></label>
+              <input type="text" id="input_player2" class="form__input" required />
+            </li>
+            <li class="form__item">
+              <label for="input_player3" class="form__label"><span>Player 3</span></label>
+              <input type="text" id="input_player3" class="form__input" required />
+            </li>
+            <li class="form__item">
+              <label for="input_player4" class="form__label"><span>Player 4</span></label>
+              <input type="text" id="input_player4" class="form__input" required />
+            </li>
+            <li class="form__item boards-container">
+              <div class="board three-board">
+                <div class="three-board__box">1</div>
+                <div class="three-board__box">2</div>
+                <div class="three-board__box">3</div>
+                <div class="three-board__box">4</div>
+                <div class="three-board__box">5</div>
+                <div class="three-board__box">6</div>
+                <div class="three-board__box">7</div>
+                <div class="three-board__box">8</div>
+                <div class="three-board__box">9</div>
+              </div>
+              <div class="board four-board">
+                <div class="four-board__box">1</div>
+                <div class="four-board__box">2</div>
+                <div class="four-board__box">3</div>
+                <div class="four-board__box">4</div>
+                <div class="four-board__box">5</div>
+                <div class="four-board__box">6</div>
+                <div class="four-board__box">7</div>
+                <div class="four-board__box">8</div>
+                <div class="four-board__box">9</div>
+                <div class="four-board__box">10</div>
+                <div class="four-board__box">11</div>
+                <div class="four-board__box">12</div>
+                <div class="four-board__box">13</div>
+                <div class="four-board__box">14</div>
+                <div class="four-board__box">15</div>
+                <div class="four-board__box">16</div>
+              </div>
+              <div class="board five-board">
+                <div class="five-board__box">1</div>
+                <div class="five-board__box">2</div>
+                <div class="five-board__box">3</div>
+                <div class="five-board__box">4</div>
+                <div class="five-board__box">5</div>
+                <div class="five-board__box">6</div>
+                <div class="five-board__box">7</div>
+                <div class="five-board__box">8</div>
+                <div class="five-board__box">9</div>
+                <div class="five-board__box">10</div>
+                <div class="five-board__box">11</div>
+                <div class="five-board__box">12</div>
+                <div class="five-board__box">13</div>
+                <div class="five-board__box">14</div>
+                <div class="five-board__box">15</div>
+                <div class="five-board__box">16</div>
+                <div class="five-board__box">17</div>
+                <div class="five-board__box">18</div>
+                <div class="five-board__box">19</div>
+                <div class="five-board__box">20</div>
+                <div class="five-board__box">21</div>
+                <div class="five-board__box">22</div>
+                <div class="five-board__box">23</div>
+                <div class="five-board__box">24</div>
+                <div class="five-board__box">25</div>
+              </div>
+            </li>
+            <li>
+              <button class="button form__button">Start</button>
+            </li>
+          </ul>
+         
+        </form>
+      </section>
+
+      <section class="ranking hidden"></section>
       <section class="game"></section>
     </main>
 
     <footer>
       <p>&copy; 2024 Ginbo by David Davila. Todos los derechos reservados.</p>
     </footer>
+    <script src="./src/script.js" type="module"></script>
   </body>
 </html>
