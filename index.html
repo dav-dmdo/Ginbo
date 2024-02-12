@@ -23,7 +23,7 @@
           <a href="#" id="menu__new-game-button" class="button menu__button"
             >New Game</a
           >
-          <a href="#" class="button menu__button">Ranking</a>
+          <a href="#" id="menu__ranking-button" class="button menu__button">Ranking</a>
         </div>
       </section>
 
@@ -37,7 +37,9 @@
               <input
                 type="text"
                 id="input_player1"
+                name="player1"
                 class="form__input"
+                value="player1"
                 required
               />
             </li>
@@ -48,6 +50,8 @@
               <input
                 type="text"
                 id="input_player2"
+                name="player2"
+                value="player2"
                 class="form__input"
                 required
               />
@@ -59,6 +63,8 @@
               <input
                 type="text"
                 id="input_player3"
+                name="player3"
+                value="player3"
                 class="form__input"
                 required
               />
@@ -70,6 +76,8 @@
               <input
                 type="text"
                 id="input_player4"
+                name="player4"
+                value="player4"
                 class="form__input"
                 required
               />
@@ -109,7 +117,7 @@
               </div>
             </li>
             <li>
-              <button class="button form__button">Start</button>
+              <button id="start-button" class="button form__button">Start</button>
             </li>
           </ul>
         </form>
@@ -117,6 +125,9 @@
 
       <section id="ranking-section" class="ranking-section hidden">
         <ul class="ranking__list">
+          <a href="#" id="ranking__back-button" class="button ranking__button"
+            >Back</a
+          >
           <li class="ranking__item">
             <span class="ranking__rank">1.</span>
             <span class="ranking__player">David</span>
@@ -214,7 +225,7 @@
           </li>
         </ul>
       </section>
-      <section class="game-section hidden">
+      <section id="game-section" class="game-section hidden">
         <div class="game-container">
           <div class="current-number">
             <span>n</span>

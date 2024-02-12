@@ -1,42 +1,49 @@
 import { toHide, toggleHide } from "./utils.js";
-
-const menuSection = document.querySelector('#menu-section');
+import { menuObj } from "./components/MenuSection.js"
+import { rankingObj } from "./components/RankingSection.js";
+import { formObj } from "./components/FormSection.js";
+import { gameObj} from "./components/GameSection.js";
 const newGameSection = document.querySelector('#new-game-form-section');
 const rankingSection = document.querySelector('#ranking-section');
 const gameSection = document.querySelector('#game-section');
 
-const newGameForm = document.querySelector('#new-game-form')
-
-const menuNewGameButton = document.querySelector('#menu__new-game-button');
 
 
-const initialize = () =>{
+
+
+
+const initialize = () => {
+
 
 }
 
-
-
-
-
-menuNewGameButton.addEventListener('click', () => {
-
-  toHide(menuSection);
-  toggleHide(newGameSection);
-
+menuObj.newGameBtn.addEventListener('click', () => {
+  toHide(menuObj.section);
+  toggleHide(formObj.section);
 });
-console.log('hila');
 
-newGameForm.addEventListener('submit', (ev) =>{
-  ev.preventDefault();
-  const formData = new FormData(newGameForm);
-  const entriesArray = Array.from(formData.entries());
+menuObj.rankingBtn.addEventListener('click', () => {
+  toHide(menuObj.section);
+  toggleHide(rankingObj.section);
+})
 
-  
-  entriesArray.forEach(entry => {
-    const [clave, valor] = entry; 
-    console.log(clave, valor); 
-  });
-});
+rankingObj.backBtn.addEventListener('click',() =>{
+  toHide(rankingObj.section);
+  toggleHide(menuObj.section);
+} )
+
+formObj.form.addEventListener('submit', e  => {
+  e.preventDefault();
+  const data = Object.fromEntries(new FormData(e.currentTarget));
+  toHide(formObj.section);
+  toggleHide(gameObj.section);
+  console.log(data);
+})
+
+initialize()
+
+
+
 
 
 
