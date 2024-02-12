@@ -3,14 +3,6 @@ import { menuObj } from "./components/MenuSection.js"
 import { rankingObj } from "./components/RankingSection.js";
 import { formObj } from "./components/FormSection.js";
 import { gameObj} from "./components/GameSection.js";
-const newGameSection = document.querySelector('#new-game-form-section');
-const rankingSection = document.querySelector('#ranking-section');
-const gameSection = document.querySelector('#game-section');
-
-
-
-
-
 
 const initialize = () => {
 
