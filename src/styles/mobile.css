@@ -74,7 +74,7 @@ footer {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 5vh;
+  min-height: 5vh;
 }
 
 /*       header         */
@@ -431,7 +431,6 @@ footer {
   align-items: center;
   padding: 10%;
   width: 100%;
-  aspect-ratio: 1;
 }
 
 /*  players container  */
